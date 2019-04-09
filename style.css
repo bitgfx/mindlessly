@@ -1,0 +1,97 @@
+:root {
+    --main-bg-color: pink;
+    --margin-normal: 24px;
+    --icon-size: 32px;
+    --font-size: 20px;
+    --title-size: 64px;
+    --font-color: #fff;
+    --shadow: drop-shadow( 3px 3px 5px rgba(0, 0, 0, .7));
+}
+
+body {
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--font-size);
+    color: var(--font-color);
+}
+
+#video-container {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+
+}
+
+#video-player {
+    min-width: 100%;
+    min-height: 100%;
+    margin-top: 0px;
+}
+
+#video-controls {
+    height: 128px;
+    width: 128px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -64px;
+    margin-top: -64px;
+}
+
+#video-header {
+    position: absolute;
+    top: var(--margin-normal);
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    text-align: center;
+    -webkit-filter: var(--shadow);
+    filter: var(--shadow);
+}
+
+.icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    /* text-shadow: 0px 2px 24px rgba(0,0,0,0.5); */
+    -webkit-filter: var(--shadow);
+    filter: var(--shadow);
+    padding: var(--margin-normal);
+}
+
+#top-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.title-text {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: var(--title-size);
+    padding: 0;
+    margin: 0;
+    -webkit-filter: var(--shadow);
+    filter: var(--shadow);
+}
+
+.subtitle-text {
+    padding: 0;
+    margin: 0;
+    -webkit-filter: var(--shadow);
+    filter: var(--shadow);
+}

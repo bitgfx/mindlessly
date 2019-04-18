@@ -32,6 +32,30 @@ body {
     margin-top: 0px;
 }
 
+.fade-animation {
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+     -ms-transition: opacity 0.5s ease-in;
+      -o-transition: opacity 0.5s ease-in;
+         transition: opacity 0.5s ease-in;
+}
+
+.faded {
+    cursor: none;
+}
+
+.faded > #video-controls,
+.faded > #video-header,
+.faded > .icon {
+    opacity: 0;
+}
+
+.paused > #video-controls,
+.paused > #video-header,
+.paused > .icon {
+    opacity: 1;
+}
+
 #video-controls {
     height: 128px;
     width: 128px;

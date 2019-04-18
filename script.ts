@@ -2,9 +2,9 @@ const classFaded = "faded"
 
 const sources = {
     1: {
-        audio: "bensound-epic.mp3",
-        video: "joaqina.mp4",
-        title: "Bali"
+        audio: "https://storage.cloud.google.com/mindlessly/bensound-epic.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/joaqina.mp4",
+        title: "Joaqina Test"
     }
 }
 

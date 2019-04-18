@@ -1,9 +1,9 @@
 var classFaded = "faded";
 var sources = {
     1: {
-        audio: "bensound-epic.mp3",
-        video: "joaqina.mp4",
-        title: "Bali"
+        audio: "https://storage.cloud.google.com/mindlessly/bensound-epic.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/joaqina.mp4",
+        title: "Joaqina Test"
     }
 };
 var voiceOver = new Audio();

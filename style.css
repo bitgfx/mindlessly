@@ -68,8 +68,8 @@ body {
     position: absolute;
     top: var(--margin-normal);
     left: 50%;
-    margin-left: -200px;
-    width: 400px;
+    margin-left: -300px;
+    width: 600px;
     text-align: center;
     -webkit-filter: var(--shadow);
     filter: var(--shadow);

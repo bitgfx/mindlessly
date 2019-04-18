@@ -1,9 +1,14 @@
 var classFaded = "faded";
 var sources = {
-    1: {
+    0: {
         audio: "https://storage.cloud.google.com/mindlessly/bensound-epic.mp3",
         video: "https://storage.cloud.google.com/mindlessly/joaqina.mp4",
         title: "Joaqina Test"
+    },
+    1: {
+        audio: "https://storage.cloud.google.com/mindlessly/voice.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/scene-720.mp4",
+        title: "Northern Lights"
     }
 };
 var voiceOver = new Audio();

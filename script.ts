@@ -102,3 +102,11 @@ function updateSources() {
 
 // TODO: When voiceover is done, stop video
 // TODO: Loop video as long as voice is playing
+/* TODO: Handle buffering
+    video.onwaiting = function(){
+        showPlaceholder(placeholder, this);
+    };
+    video.onplaying = function(){
+        hidePlaceholder(placeholder, this);
+    };
+*/

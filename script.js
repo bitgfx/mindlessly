@@ -110,3 +110,4 @@ function updateSources() {
     };
 */
 // TODO: Arbitrary number of videos. Need to rename videos and ceate folders in G cloud
+// TODO: Split up media in segments: https://medium.com/canal-tech/how-video-streaming-works-on-the-web-an-introduction-7919739f7e1

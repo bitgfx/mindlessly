@@ -62,6 +62,7 @@ body {
     top: 50%;
     margin-left: -64px;
     margin-top: -64px;
+    z-index: 100;
 }
 
 #video-header {

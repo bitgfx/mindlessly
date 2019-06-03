@@ -10,6 +10,21 @@ const sources = {
         audio: "https://storage.cloud.google.com/mindlessly/voice.mp3",
         video: "https://storage.cloud.google.com/mindlessly/scene-720.mp4",
         title: "Northern Lights"
+    },
+    2: {
+        audio: "https://storage.cloud.google.com/mindlessly/Japan-Audio.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/Japan-Video.mp4",
+        title: "Japan"
+    },
+    3: {
+        audio: "https://storage.cloud.google.com/mindlessly/Chile-Audio.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/Chile-Video.mp4",
+        title: "Chile"
+    },
+    4: {
+        audio: "https://storage.cloud.google.com/mindlessly/Iceland-Audio.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/Iceland-Video.mp4",
+        title: "Iceland"
     }
 }
 

@@ -92,12 +92,33 @@ function updateSources() {
     voiceOver.src = source.audio;
     document.getElementById("video-title").innerText = source.title;
 }
+function setupSceneSelection() {
+    var sceneList = document.getElementById("scene-list");
+    for (var key in sources) {
+        var name_1 = sources[key].title;
+        var link = document.createElement("a");
+        link.setAttribute("href", "?scene=" + key);
+        link.appendChild(document.createTextNode(name_1));
+        var li = document.createElement("li");
+        li.appendChild(link);
+        sceneList.appendChild(li);
+    }
+    document.getElementById("close").onclick = function () {
+        var aa = document.getElementById("scene-selection");
+        aa.classList.add("hidden");
+    };
+    document.getElementById("button-settings").onclick = function () {
+        var aa = document.getElementById("scene-selection");
+        aa.classList.remove("hidden");
+    };
+}
 (function () {
     updateSources();
     scaleVideo();
     setupControls();
     setupFading();
     window.onresize = scaleVideo;
+    setupSceneSelection();
 })();
 // TODO: When voiceover is done, stop video
 // TODO: Loop video as long as voice is playing

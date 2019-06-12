@@ -112,12 +112,39 @@ function updateSources() {
     document.getElementById("video-title").innerText = source.title
 }
 
+function setupSceneSelection() {
+    let sceneList = document.getElementById("scene-list")
+
+    for (let key in sources) {
+        let name = sources[key].title
+
+        let link = document.createElement("a")
+        link.setAttribute("href", "?scene=" + key)
+        link.appendChild(document.createTextNode(name))
+
+        let li = document.createElement("li")
+        li.appendChild(link)
+        sceneList.appendChild(li)
+    }   
+
+    document.getElementById("close").onclick = function() {
+        let aa = document.getElementById("scene-selection")
+        aa.classList.add("hidden")
+    };
+
+    document.getElementById("button-settings").onclick = function() {
+        let aa = document.getElementById("scene-selection")
+        aa.classList.remove("hidden")
+    };
+}
+
 (function() {
     updateSources()
     scaleVideo()
     setupControls()
     setupFading()
     window.onresize = scaleVideo
+    setupSceneSelection()
  })()
 
 // TODO: When voiceover is done, stop video

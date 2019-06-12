@@ -24,6 +24,11 @@ var sources = {
         audio: "https://storage.cloud.google.com/mindlessly/Iceland-Audio.mp3",
         video: "https://storage.cloud.google.com/mindlessly/Iceland-Video.mp4",
         title: "Iceland"
+    },
+    5: {
+        audio: "https://storage.cloud.google.com/mindlessly/Brazil-Audio.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/Brazil-Video.mp4",
+        title: "Iceland"
     }
 };
 var voiceOver = new Audio();

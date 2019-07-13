@@ -26,8 +26,8 @@ var sources = {
         title: "Brazil"
     },
     6: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/2-alsivk.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway/2-alsvik.mp4",
+        audio: "https://storage.cloud.google.com/mindlessly/norway/2-summer-midnight.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/norway/2-summer-midnight.mp4",
         title: "Norway - 2 Summer Midnight"
     }
     ,

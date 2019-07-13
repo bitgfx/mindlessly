@@ -1,40 +1,40 @@
 var classFaded = "faded";
 var sources = {
     1: {
-        audio: "https://storage.cloud.google.com/mindlessly/voice.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/scene-720.mp4",
-        title: "Northern Lights"
+        audio: "https://storage.cloud.google.com/mindlessly/norway/1-northern-lights.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/norway/1-northern-lights.mp4",
+        title: "Norway - 1 Northern Lights"
     },
     2: {
-        audio: "https://storage.cloud.google.com/mindlessly/Japan-Audio.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/Japan-Video.mp4",
+        audio: "https://storage.cloud.google.com/mindlessly/japan/1-japan.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/japan/1-japan.mp4",
         title: "Japan"
     },
     3: {
-        audio: "https://storage.cloud.google.com/mindlessly/Chile-Audio.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/Chile-Video.mp4",
+        audio: "https://storage.cloud.google.com/mindlessly/chile/1-chile.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/chile/1-chile.mp4",
         title: "Chile"
     },
     4: {
-        audio: "https://storage.cloud.google.com/mindlessly/Iceland-Audio.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/Iceland-Video.mp4",
+        audio: "https://storage.cloud.google.com/mindlessly/iceland/1-iceland.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/iceland/1-iceland.mp4",
         title: "Iceland"
     },
     5: {
-        audio: "https://storage.cloud.google.com/mindlessly/Brazil-Audio.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/Brazil-Video.mp4",
+        audio: "https://storage.cloud.google.com/mindlessly/brazil/1-brazil.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/brazil/1-brazil.mp4",
         title: "Brazil"
     },
     6: {
-        audio: "https://storage.cloud.google.com/mindlessly/Norway-Alsvik.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/Norway-Alsvik.mp4",
-        title: "Norway"
+        audio: "https://storage.cloud.google.com/mindlessly/norway/2-alsivk.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/norway/2-alsvik.mp4",
+        title: "Norway - 2 Summer Midnight"
     }
     ,
     7: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway-mountain-lake.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway-mountain-lake.mp4",
-        title: "Norwegian Mountain Lake"
+        audio: "https://storage.cloud.google.com/mindlessly/norway/3-mountain-lake.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/norway/3-mountain-lake.mp4",
+        title: "Norway - 3 Mountain Lake"
     }
     
 };

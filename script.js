@@ -24,7 +24,19 @@ var sources = {
         audio: "https://storage.cloud.google.com/mindlessly/Brazil-Audio.mp3",
         video: "https://storage.cloud.google.com/mindlessly/Brazil-Video.mp4",
         title: "Brazil"
+    },
+    6: {
+        audio: "https://storage.cloud.google.com/mindlessly/Norway-Alsvik.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/Norway-Alsvik.mp4",
+        title: "Norway"
     }
+    ,
+    7: {
+        audio: "https://storage.cloud.google.com/mindlessly/norway-mountain-lake.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/norway-mountain-lake.mp4",
+        title: "Norwegian Mountain Lake"
+    }
+    
 };
 var voiceOver = new Audio();
 var fadingTimer;

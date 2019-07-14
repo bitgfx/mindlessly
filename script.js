@@ -35,6 +35,11 @@ var sources = {
         audio: "https://storage.cloud.google.com/mindlessly/norway/3-mountain-lake.mp3",
         video: "https://storage.cloud.google.com/mindlessly/norway/3-mountain-lake.mp4",
         title: "Norway - 3 Mountain Lake"
+    },
+    8: {
+        audio: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp4",
+        video: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp4",
+        title: "Norway - 4 Mountain Lake 2"
     }
     
 };

@@ -2,7 +2,7 @@
     --main-bg-color: #eee;
     --margin-normal: 24px;
     --icon-size: 32px;
-    --font-size: 20px;
+    --font-size: 16px;
     --title-size: 64px;
     --font-color: #fff;
     --shadow: drop-shadow( 3px 3px 5px rgba(0, 0, 0, .7));
@@ -52,12 +52,14 @@ body {
 
 .faded > #video-controls,
 .faded > #video-header,
+.faded > #bottom-center,
 .faded > .icon {
     opacity: 0;
 }
 
 .paused > #video-controls,
 .paused > #video-header,
+.paused > #bottom-center,
 .paused > .icon {
     opacity: 1;
 }
@@ -93,6 +95,10 @@ body {
     padding: var(--margin-normal);
 }
 
+#video-container :not(:last-child) {
+    z-index: 60;
+}
+
 #top-left {
     position: absolute;
     left: 0;
@@ -105,10 +111,27 @@ body {
     top: 0;
 }
 
+#bottom-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
 #bottom-right {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+#bottom-center{
+    position: absolute;
+    bottom: var(--margin-normal);
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    text-align: center;
+    -webkit-filter: var(--shadow);
+    filter: var(--shadow);
 }
 
 .title-text {
@@ -123,41 +146,50 @@ body {
 .subtitle-text {
     padding: 0;
     margin: 0;
+    font-size: 20px;
     -webkit-filter: var(--shadow);
     filter: var(--shadow);
 }
 
 #scene-selection {
+    height: 400px;
+    overflow: scroll;
     position: absolute;
-    right:0px;
+    right:24px;
+    bottom: 64px;
     width: auto;
-    max-width: 300px;
-    height: 100%;
-    background-color: #eee;
-    color: #111;
+    max-width: 400px;
+    background-color: #424242;
+    color: #ffffff;
     white-space: nowrap;
-
-    -webkit-transition: max-width 1s;
-    -moz-transition: max-width 1s;
-     -ms-transition: max-width 1s;
-      -o-transition: max-width 1s;
-         transition: max-width 1s;
+    font-size: 14px;
 }
 
-#scene-selection > .inner {
-    padding: var(--margin-normal);
-}
 
 .hidden {
     max-width: 0 !important;
 }
 
-#scene-list {
-    padding-left: 0;
-    padding: var(--margin-normal);
+ul{
+    margin: 0;
+    padding: 0;
 }
 
 #scene-list li {
     list-style: none;
-    
+    padding: 24px;
+}
+
+#scene-list li a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 24px;
+}
+
+#scene-list li:hover {
+    background-color: #616161;
+}
+
+#logo{
+    font-size: 14px;
 }

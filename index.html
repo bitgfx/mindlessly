@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mindlessly</title>
         <link rel="stylesheet" href="style.css" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Mr+Dafoe" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Mr+Dafoe" rel="stylesheet">
     </head>
     <body>
         <div id="video-container" class="paused">
             <div id="video-header" class="fade-animation">
-                <h1 id="video-title" class="title-text">Bali</h1>
-                <p class="subtitle-text">A journey in meditation</p>
+                <h1 id="video-title" class="title-text"></h1>
+                <p id="video-subtitle" class="subtitle-text"></p>
             </div>
 
             <div id="video-controls" class="fade-animation">
@@ -24,21 +25,23 @@
                 <a href="#" id="button-favorite"><img src="assets/icon-favorite.svg" height="100%" width="100%" /></a>
             </div>
 
-            <div id="bottom-right" class="icon">
+            <div id="bottom-left" class="icon">
                 <a href="#" id="button-settings"><img src="assets/icon-settings.svg" height="100%" width="100%" /></a>
             </div>
-            
-            <div id="scene-selection" class="hidden">
-                <div class="inner">
-                    <h3>Scene selection</h3>
-                    <ul id="scene-list"></ul>
 
-                    <a href="#" id="close">Close</a>
-                </div>
+            <div id="bottom-right" class="icon">
+                <a href="#" id="button-scenes"><img src="assets/icon-scenes.svg" height="100%" width="100%" /></a>
+            </div>
+            
+            <div id="bottom-center" class="fade-animation">
+                <p id="logo" class="subtitle-text">A Journey in Meditation</p>
+            </div>
+
+            <div id="scene-selection" class="hidden">
+                <ul id="scene-list"></ul>
             </div>
 
             <video id="video-player">
-                    <!-- <source src="joaqina.mp4" type="video/mp4"> -->
                     <p>Your browser doesn't support HTML5 video</p>
             </video>
         </div>

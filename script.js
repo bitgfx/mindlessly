@@ -160,7 +160,7 @@ function setupSceneSelection() {
     window.onresize = scaleVideo;
     setupSceneSelection();
 })();
-// TODO: When voiceover is done, stop video
+// TODO: When voiceover is done , stop video 
 // TODO: Loop video as long as voice is playing
 /* TODO: Handle buffering
     video.onwaiting = function(){

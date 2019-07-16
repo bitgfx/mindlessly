@@ -126,7 +126,7 @@ function updateSources() {
 function setupSceneSelection() {
     var sceneList = document.getElementById("scene-list");
     for (var key in sources) {
-        var name_1 = key + (". ") + sources[key].title + (": ") + sources[key].subtitle;
+        var name_1 = key + ". " + sources[key].title + ": " + sources[key].subtitle;
         var link = document.createElement("a");
         link.setAttribute("href", "?scene=" + key);
         link.appendChild(document.createTextNode(name_1));

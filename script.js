@@ -3,43 +3,56 @@ var sources = {
     1: {
         audio: "https://storage.cloud.google.com/mindlessly/norway/1-northern-lights.mp3",
         video: "https://storage.cloud.google.com/mindlessly/norway/1-northern-lights.mp4",
-        title: "Norway - 1 Northern Lights"
+        title: "Norway",
+        subtitle: "Northern Lights"
     },
     2: {
         audio: "https://storage.cloud.google.com/mindlessly/japan/1-japan.mp3",
         video: "https://storage.cloud.google.com/mindlessly/japan/1-japan.mp4",
-        title: "Japan"
+        title: "Japan",
+        subtitle: "Untitled"
     },
     3: {
         audio: "https://storage.cloud.google.com/mindlessly/chile/1-chile.mp3",
         video: "https://storage.cloud.google.com/mindlessly/chile/1-chile.mp4",
-        title: "Chile"
+        title: "Chile",
+        subtitle: "The Pacific Coast"
     },
     4: {
         audio: "https://storage.cloud.google.com/mindlessly/iceland/1-iceland.mp3",
         video: "https://storage.cloud.google.com/mindlessly/iceland/1-iceland.mp4",
-        title: "Iceland"
+        title: "Iceland",
+        subtitle: "Untitled"
     },
     5: {
         audio: "https://storage.cloud.google.com/mindlessly/brazil/1-brazil.mp3",
         video: "https://storage.cloud.google.com/mindlessly/brazil/1-brazil.mp4",
-        title: "Brazil"
+        title: "Brazil",
+        subtitle: "The lagoon"
     },
     6: {
         audio: "https://storage.cloud.google.com/mindlessly/norway/2-summer-midnight.mp3",
         video: "https://storage.cloud.google.com/mindlessly/norway/2-summer-midnight.mp4",
-        title: "Norway - 2 Summer Midnight"
-    }
-    ,
+        title: "Norway",
+        subtitle: "Summer Midnight"
+    },
     7: {
         audio: "https://storage.cloud.google.com/mindlessly/norway/3-mountain-lake.mp3",
         video: "https://storage.cloud.google.com/mindlessly/norway/3-mountain-lake.mp4",
-        title: "Norway - 3 Mountain Lake"
+        title: "Norway",
+        subtitle: "Mountain Lake"
     },
     8: {
         audio: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp4",
         video: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp4",
-        title: "Norway - 4 Mountain Lake 2"
+        title: "Norway",
+        subtitle: "Mountain Lake 2"
+    },
+    9: {
+        audio: "https://storage.cloud.google.com/mindlessly/norway/5-sognefjorden-1080p.mp4",
+        video: "https://storage.cloud.google.com/mindlessly/norway/5-sognefjorden-1080p.mp4",
+        title: "Norway",
+        subtitle: "The fjords"
     }
     
 };
@@ -108,11 +121,12 @@ function updateSources() {
     videoPlayer.appendChild(node);
     voiceOver.src = source.audio;
     document.getElementById("video-title").innerText = source.title;
+    document.getElementById("video-subtitle").innerText = source.subtitle;
 }
 function setupSceneSelection() {
     var sceneList = document.getElementById("scene-list");
     for (var key in sources) {
-        var name_1 = sources[key].title;
+        var name_1 = key + ". " + sources[key].title + ": " + sources[key].subtitle;
         var link = document.createElement("a");
         link.setAttribute("href", "?scene=" + key);
         link.appendChild(document.createTextNode(name_1));
@@ -120,14 +134,23 @@ function setupSceneSelection() {
         li.appendChild(link);
         sceneList.appendChild(li);
     }
-    document.getElementById("close").onclick = function () {
-        var aa = document.getElementById("scene-selection");
-        aa.classList.add("hidden");
-    };
-    document.getElementById("button-settings").onclick = function () {
+
+    document.getElementById("button-scenes").onmouseover = function () {
         var aa = document.getElementById("scene-selection");
         aa.classList.remove("hidden");
     };
+
+    document.getElementById("button-scenes").click = function () {
+        var aa = document.getElementById("scene-selection");
+        aa.classList.remove("hidden");    
+        // TODO: Make a if else / toggle between hide and show on click on button-scenes icon
+    };
+
+    document.getElementById("scene-selection").onmouseleave = function () {
+        var aa = document.getElementById("scene-selection");
+        aa.classList.add("hidden");
+    };
+
 }
 (function () {
     updateSources();
@@ -137,7 +160,7 @@ function setupSceneSelection() {
     window.onresize = scaleVideo;
     setupSceneSelection();
 })();
-// TODO: When voiceover is done, stop video
+// TODO: When voiceover is done , stop video 
 // TODO: Loop video as long as voice is playing
 /* TODO: Handle buffering
     video.onwaiting = function(){

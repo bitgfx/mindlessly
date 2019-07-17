@@ -43,16 +43,22 @@ var sources = {
         subtitle: "Mountain Lake"
     },
     8: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp4",
+        audio: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp3",
         video: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp4",
         title: "Norway",
         subtitle: "Mountain Lake 2"
     },
     9: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/5-sognefjorden-1080p.mp4",
+        audio: "https://storage.cloud.google.com/mindlessly/norway/5-sognefjorden-1080p.mp3",
         video: "https://storage.cloud.google.com/mindlessly/norway/5-sognefjorden-1080p.mp4",
         title: "Norway",
         subtitle: "The fjords"
+    },
+    10: {
+        audio: "https://storage.cloud.google.com/mindlessly/norway/6-helgoya-720.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/norway/6-helgoya-720.mp4",
+        title: "Norway",
+        subtitle: "Helgøya"
     }
     
 };

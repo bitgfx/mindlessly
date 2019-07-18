@@ -59,6 +59,12 @@ var sources = {
         video: "https://storage.cloud.google.com/mindlessly/norway/6-helgoya-720.mp4",
         title: "Norway",
         subtitle: "Helgøya"
+    },
+    11: {
+        audio: "https://storage.cloud.google.com/mindlessly/7-sognefjorden-2-1080p.mp3",
+        video: "https://storage.cloud.google.com/mindlessly/norway/7-sognefjorden-2-1080p.mp4",
+        title: "Norway",
+        subtitle: "Sognefjorden 2"
     }
     
 };

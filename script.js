@@ -1,70 +1,74 @@
 var classFaded = "faded";
 var sources = {
     1: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/1-northern-lights.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway/1-northern-lights.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/norway/1-northern-lights/voice.mp3",
+        video: "https://storage.googleapis.com/mindlessly/norway/1-northern-lights/video.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/norway/1-northern-lights/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "Northern Lights"
     },
     2: {
-        audio: "https://storage.cloud.google.com/mindlessly/japan/1-japan.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/japan/1-japan.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/japan/1-japan/voice.mp3",
+        video: "https://storage.googleapis.com/mindlessly/japan/1-japan/video.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/japan/1-japan/thumbnail-s.jpg",
         title: "Japan",
         subtitle: "Untitled"
     },
     3: {
-        audio: "https://storage.cloud.google.com/mindlessly/chile/1-chile.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/chile/1-chile.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/chile/1-chile/voice.mp3",
+        video: "https://storage.googleapis.com/mindlessly/chile/1-chile/video.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/chile/1-chile/thumbnail-s.jpg",
         title: "Chile",
         subtitle: "The Pacific Coast"
     },
     4: {
-        audio: "https://storage.cloud.google.com/mindlessly/iceland/1-iceland.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/iceland/1-iceland.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/iceland/1-iceland/voice.mp3",
+        video: "https://storage.googleapis.com/mindlessly/iceland/1-iceland/video.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/iceland/1-iceland/thumbnail-s.jpg",
         title: "Iceland",
         subtitle: "Untitled"
     },
     5: {
-        audio: "https://storage.cloud.google.com/mindlessly/brazil/1-brazil.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/brazil/1-brazil.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/brazil/1-brazil/voice.mp3",
+        video: "https://storage.googleapis.com/mindlessly/brazil/1-brazil/video.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/brazil/1-brazil/thumbnail-s.jpg",
         title: "Brazil",
         subtitle: "The lagoon"
     },
     6: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/2-summer-midnight.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway/2-summer-midnight.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/norway/2-summer-midnight/voice.mp3",
+        video: "https://storage.googleapis.com/mindlessly/norway/2-summer-midnight/video.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/norway/2-summer-midnight/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "Summer Midnight"
     },
     7: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/3-mountain-lake.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway/3-mountain-lake.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/ambient.mp3",
+        video: "https://storage.googleapis.com/mindlessly/norway/3-mountain-lake/video.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/norway/3-mountain-lake/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "Mountain Lake"
     },
     8: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway/4-mountain-lake-2-1080.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/ambient.mp3",
+        video: "https://storage.googleapis.com/mindlessly/norway/4-mountain-lake/video-1080.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/norway/4-mountain-lake/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "Mountain Lake 2"
     },
     9: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/5-sognefjorden-1080p.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway/5-sognefjorden-1080p.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/ambient.mp3",
+        video: "https://storage.googleapis.com/mindlessly/norway/5-sognefjorden/video-1080.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/norway/5-sognefjorden/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "The fjords"
     },
     10: {
-        audio: "https://storage.cloud.google.com/mindlessly/norway/6-helgoya-720.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway/6-helgoya-720.mp4",
+        audio: "https://storage.googleapis.com/mindlessly/ambient.mp3",
+        video: "https://storage.googleapis.com/mindlessly/norway/6-helgoya/video-720.mp4",
+        thumb: "https://storage.googleapis.com/mindlessly/norway/6-helgoya/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "Helgøya"
-    },
-    11: {
-        audio: "https://storage.cloud.google.com/mindlessly/7-sognefjorden-2-1080p.mp3",
-        video: "https://storage.cloud.google.com/mindlessly/norway/7-sognefjorden-2-1080p.mp4",
-        title: "Norway",
-        subtitle: "Sognefjorden 2"
     }
     
 };
@@ -82,7 +86,6 @@ function scaleVideo() {
     var videoPlayer = document.getElementById("video-player");
     var yOffset = videoPlayer.clientHeight - videoContainer.clientHeight;
     var xOffset = videoPlayer.clientWidth - videoContainer.clientWidth;
-    videoPlayer.setAttribute("style", "margin-top: " + (-yOffset / 2) + "px; margin-left: " + (-xOffset / 2) + "px");
 }
 function setupControls() {
     var videoContainer = document.getElementById("video-container");
@@ -172,6 +175,52 @@ function setupSceneSelection() {
     window.onresize = scaleVideo;
     setupSceneSelection();
 })();
+
+
+/* Toggle fullscreen */
+function toggleFullscreen(elem) {
+  elem = elem || document.documentElement;
+  var iconFullscreen = document.getElementById('icon-fullscreen');
+  var fullscreenIconUrl = 'assets/icon-fullscreen-24px.svg';
+  var fullscreenExitIconUrl = 'assets/icon-fullscreen_exit-24px.svg';
+  if (!document.fullscreenElement && !document.mozFullScreenElement &&
+    !document.webkitFullscreenElement && !document.msFullscreenElement) {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+    var newImage = new Image;
+    newImage.onload = function (){
+        iconFullscreen.src = fullscreenExitIconUrl;
+    };
+    newImage.src = fullscreenExitIconUrl;
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+    iconFullscreen.src = fullscreenIconUrl;
+  }
+}
+/* Toggle fullscreen - event listener on button */
+document.getElementById('button-fullscreen').addEventListener('click', function() {
+  toggleFullscreen();
+});
+
+
+// TODO: Legge inn thumbnails i menyen
+
+
 // TODO: When voiceover is done , stop video 
 // TODO: Loop video as long as voice is playing
 /* TODO: Handle buffering

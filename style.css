@@ -1,5 +1,9 @@
 :root {
     --main-bg-color: #eee;
+    --color-white: #fff;
+    --color-light-grey: #fafafa;
+    --color-medium-grey: #ccc;
+    --color-medium-grey: #666;
     --margin-normal: 24px;
     --icon-size: 32px;
     --font-size: 16px;
@@ -219,3 +223,7 @@ ul{
     font-size: 14px;
 }
 
+
+a{
+    text-decoration: none;
+}

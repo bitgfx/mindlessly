@@ -43,28 +43,28 @@ var sources = {
         subtitle: "Summer Midnight"
     },
     7: {
-        audio: "https://storage.googleapis.com/mindlessly/ambient.mp3",
+        audio: "https://storage.googleapis.com/mindlessly/default.mp3",
         video: "https://storage.googleapis.com/mindlessly/norway/3-mountain-lake/video.mp4",
         thumb: "https://storage.googleapis.com/mindlessly/norway/3-mountain-lake/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "Mountain Lake"
     },
     8: {
-        audio: "https://storage.googleapis.com/mindlessly/ambient.mp3",
+        audio: "https://storage.googleapis.com/mindlessly/default.mp3",
         video: "https://storage.googleapis.com/mindlessly/norway/4-mountain-lake/video-1080.mp4",
         thumb: "https://storage.googleapis.com/mindlessly/norway/4-mountain-lake/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "Mountain Lake 2"
     },
     9: {
-        audio: "https://storage.googleapis.com/mindlessly/ambient.mp3",
+        audio: "https://storage.googleapis.com/mindlessly/default.mp3",
         video: "https://storage.googleapis.com/mindlessly/norway/5-sognefjorden/video-1080.mp4",
         thumb: "https://storage.googleapis.com/mindlessly/norway/5-sognefjorden/thumbnail-s.jpg",
         title: "Norway",
         subtitle: "The fjords"
     },
     10: {
-        audio: "https://storage.googleapis.com/mindlessly/ambient.mp3",
+        audio: "https://storage.googleapis.com/mindlessly/default.mp3",
         video: "https://storage.googleapis.com/mindlessly/norway/6-helgoya/video-720.mp4",
         thumb: "https://storage.googleapis.com/mindlessly/norway/6-helgoya/thumbnail-s.jpg",
         title: "Norway",

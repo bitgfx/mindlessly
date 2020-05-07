@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -e
+SCALE_FACTOR="1.5"
 
 confirm() {
     read -r -p "${1:-Are you sure? [y/N]} " response
@@ -10,23 +12,28 @@ confirm() {
     esac
 }
 
-generate_lod() {
-    local SCALE_FACTOR="1.5"
+check_source_resolution() {
+    local source=$1
+    echo "Source is $source"
+    local resolution=$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 "${source}")
+    local resolution_width=$(echo "${resolution}" | cut -f1 -d 'x')
+    local resolution_height=$(echo "${resolution}" | cut -f2 -d 'x')
 
+    if [[ "${resolution_width}" != "1920" ]] || [[ "${resolution_height}" != "1080" ]]; then
+        echo "${resolution_width}x${resolution_height} is not 1920x1080"
+        exit 1
+    fi
+}
+
+generate_lod() {
     local source=$1
     local extension="${source##*.}"
     local filename=$(basename "${source}" ".${extension}")
-    local dest="out/${filename}/"
-    local lod="${2:-2}"
+    local dest="${2:-out/${filename}/}"
+    local lod="${3:-2}"
 
     echo "Source $1"
     echo "Transcoding videos to ${dest}"
-
-    if [[ -d "${dest}" ]]; then
-        confirm "File already exists. Overwrite?" && rm -rf "${dest}" || exit 0
-    fi
-
-    mkdir -p "${dest}"
 
     local original_resolution=$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 "${source}")
     local original_resolution_width=$(echo "${original_resolution}" | cut -f1 -d 'x')
@@ -42,14 +49,37 @@ generate_lod() {
     done
 }
 
+watermark() {
+    local source=$1
+    local destination=$2
 
-# TODO: Watermark
-# ffmpeg -i main.mp4 -i image.png -filter_complex "overlay=W-w-5:H-h-5" -c:a copy output.mp4
+    ffmpeg -i ${source} -i "overlays/1080.png" -filter_complex "overlay=W-w-5:H-h-5" -c:a copy "${destination}"
+}
 
-# TODO: LOD
+
+split() {
+    
+}
+
 # TODO: Split up in segments
 
-generate_lod "$@"
+main() {
+    local source="$1"
+    local dest="${2%/}"
+
+    check_source_resolution "${source}"
+
+    if [[ -d "${dest}" ]]; then
+        confirm "File already exists. Overwrite?" && rm -rf "${dest}" || exit 0
+    fi
+    mkdir -p "${dest}"
+
+    watermark "${source}" "${dest}/1080p.mp4"
+    generate_lod "${dest}/1080p.mp4" "${dest}"
+}
+
+main "$@"
+
 
 
 

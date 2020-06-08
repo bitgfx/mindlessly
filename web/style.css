@@ -90,10 +90,8 @@ body {
     cursor: none;
 }
 
-.faded > #video-controls,
-.faded > #video-header,
-.faded > #bottom-center,
-.faded > .icon {
+/* TODO: Should not happen on mobile, only while playing */
+.faded > div {
     opacity: 0;
 }
 
@@ -104,7 +102,7 @@ body {
     opacity: 1;
 }
 
-#video-controls {
+#mid-center {
     height: 128px;
     width: 128px;
     position: absolute;
@@ -178,6 +176,40 @@ body {
     padding: 0;
     margin: 0;
     font-size: 20px;
+}
+
+#language-selector,
+#quality-selector {
+    margin: 24px;    
+}
+
+#language-selector > .selected,
+#quality-selector > .selected {
+    text-decoration: underline;
+    color: white;
+}
+
+#language-selector > a,
+#quality-selector > a {
+    margin-right: 1em;
+    color: gray;
+    font-weight: bold;
+    display: inline;
+}
+
+#language-selector > a:hover,
+#quality-selector > a:hover {
+    color: white;
+}
+
+.icon-flag {
+    height: 24px;
+    filter: grayscale(100%)
+}
+
+.selected > .icon-flag,
+.icon-flag:hover {
+    filter: grayscale(0%)
 }
 
 #scene-selection {

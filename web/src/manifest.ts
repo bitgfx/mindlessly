@@ -1,4 +1,6 @@
 
+type Category = "Mindfulness" | "Energy" | "Sleep"
+
 export interface Chapter {
     title: string,
     description?: string,
@@ -9,6 +11,7 @@ export interface Chapter {
 export interface Episode {
     title: string,
     description?: string,
+    category: Category,
     src: string
     hidden?: boolean
     disabled?: boolean
@@ -24,10 +27,11 @@ export const manifest: Manifest = {
             title: "Test Title",
             description: "This is the test description",
             episodes: {
-                0: {
+                1: {
                     title: "First test episode",
                     description: "This describes the first test episode",
-                    src: "http://localhost:8080/preprocessor/content/dash/output/manifest.mpd"
+                    category: "Mindfulness",
+                    src: "http://localhost:8080/output/manifest.mpd"
                 }
             },
             hidden: true
@@ -35,9 +39,10 @@ export const manifest: Manifest = {
         brazil: {
             title: "Brazil",
             episodes: {
-                0: {
+                1: {
                     title: "The Lagoon",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/brazil/0/manifest.mpd"
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/brazil/1/manifest.mpd"
                 }
             }
         },
@@ -45,9 +50,10 @@ export const manifest: Manifest = {
             hidden: true,
             title: "Chile",
             episodes: {
-                0: {
+                1: {
                     title: "The Pacific Coast",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/chile/0/manifest.mpd"
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/chile/1/manifest.mpd"
                 }
             }
         },
@@ -55,9 +61,10 @@ export const manifest: Manifest = {
             hidden: true,
             title: "Iceland",
             episodes: {
-                0: {
+                1: {
                     title: "Black Sands",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/iceland/0/manifest.mpd"
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/iceland/1/manifest.mpd"
                 }
             }
         },
@@ -65,9 +72,10 @@ export const manifest: Manifest = {
             hidden: true,
             title: "Japan",
             episodes: {
-                0: {
+                1: {
                     title: "Green Garden",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/japan/0/manifest.mpd"
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/japan/1/manifest.mpd"
                 }
             }
         },
@@ -75,29 +83,35 @@ export const manifest: Manifest = {
             hidden: true,
             title: "Norway",
             episodes: {
-                0: {
-                    title: "Northern Lights",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/norway/0/manifest.mpd"
-                },
                 1: {
-                    title: "Summer Midnight",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/norway/1/manifest.mpd"
+                    title: "Northern Lights",
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/norway/1/manifest.mpd"
                 },
                 2: {
-                    title: "Mountain Lake",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/norway/2/manifest.mpd"
+                    title: "Summer Midnight",
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/norway/2/manifest.mpd"
                 },
                 3: {
-                    title: "Mountain Lake 2",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/norway/3/manifest.mpd"
+                    title: "Mountain Lake",
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/norway/3/manifest.mpd"
                 },
                 4: {
-                    title: "Sognefjorden",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/norway/4/manifest.mpd"
+                    title: "Mountain Lake 2",
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/norway/4/manifest.mpd"
                 },
                 5: {
+                    title: "Sognefjorden",
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/norway/5/manifest.mpd"
+                },
+                6: {
                     title: "Helgøya",
-                    src: "https://storage.cloud.google.com/mindlessly/chapters/norway/5/manifest.mpd"
+                    category: "Mindfulness",
+                    src: "https://storage.cloud.google.com/mindlessly/norway/6/manifest.mpd"
                 }
             }
         }

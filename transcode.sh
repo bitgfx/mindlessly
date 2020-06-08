@@ -29,12 +29,6 @@ read -p "Press enter to continue"
 mkdir -p "tmp/video" "tmp/audio"
 
 
-echo "Generating thumbnails"
-ffmpeg -i video.mp4 -ss 00:00:05 -vframes 1 -s 1920x1080 "output/thumbnail-1080.jpg"
-ffmpeg -i video.mp4 -ss 00:00:05 -vframes 1 -s 1280x720 "output/thumbnail-720.jpg"
-ffmpeg -i video.mp4 -ss 00:00:05 -vframes 1 -s 640x360 "output/thumbnail-360.jpg"
-
-
 echo "### Transcoding video to 1080p"
 ffmpeg -i "${VIDEO}" -an -sn -c:0 libx264 -x264opts 'keyint=24:min-keyint=24:no-scenecut' -b:v 5300k -maxrate 5300k -bufsize 2650k -vf 'scale=-1:1080' "tmp/video/video-1080.mp4"
 echo "### Transcoding video to 720p"
@@ -72,5 +66,13 @@ done
 echo "### Generating manifest"
 eval ${manifest_cmd}
 
+
+echo "Generating thumbnails"
+ffmpeg -i video.mp4 -ss 00:00:05 -vframes 1 -s 1920x1080 "output/thumbnail-1080.jpg"
+ffmpeg -i video.mp4 -ss 00:00:05 -vframes 1 -s 1280x720 "output/thumbnail-720.jpg"
+ffmpeg -i video.mp4 -ss 00:00:05 -vframes 1 -s 640x360 "output/thumbnail-360.jpg"
+
+
 echo "### Cleaning up"
 rm -rf tmp
+command -v beep && beep -r 3 -l 500

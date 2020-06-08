@@ -45,7 +45,7 @@ class VideoController {
     // @ts-ignore
     player: dashjs.MediaPlayerClass
     private fadingTimer: number
-    private languages = new Map()
+    languages = new Map()
     private initialized = false
     private episode: Episode
 
@@ -169,25 +169,26 @@ class VideoController {
         DOM.QualitySelector["1080p"].onclick = (e) => this.setQuality("1080p")
     }
 
-    setLanguage(lang: string) {
+    setLanguage(lang: string | null) {
+        var selectedLanguage: string
+
         if(this.languages.has(lang)) {
-            this.player.setCurrentTrack(this.languages.get(lang))
+            selectedLanguage = lang
         } else {
-            let defaultValue = this.languages.entries().next().value
-            lang = defaultValue
-            console.warn("Trying to set unknown language " + lang + ". Defaulting to " + defaultValue)
+            selectedLanguage = this.languages.keys().next().value
+            console.warn(`Trying to set unknown language <${lang}>. Defaulting to ${selectedLanguage}`)
         }
 
         Array.from(DOM.LanguageSelector.children).forEach(element => {
             element.classList.remove("selected")
 
-            if(lang === element.getAttribute("lang")) {
+            if(selectedLanguage === element.getAttribute("lang")) {
                 element.classList.add("selected")
             }
         })
 
-        this.player.setCurrentTrack(this.languages.get(lang))
-        setCookie("language", lang)
+        this.player.setCurrentTrack(this.languages.get(selectedLanguage))
+        setCookie("language", selectedLanguage)
     }
 
     setQuality(quality: Quality) {

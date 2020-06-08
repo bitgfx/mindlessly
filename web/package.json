@@ -1,25 +1,26 @@
 {
   "scripts": {
-    "player:package": "browserify build/player.js -o dist/player.js",
-    "player:watch": "watchify --debug build/player.js -o dist/player.js -v",
-
-    "css:build": "lessc css/main.less dist/style.css",
-    "css:watch": "ls css/main.less | entr npm run-script css:build",
-
+    "player:package": "browserify build/player.js -o dist/js/player.js",
+    "player:watch": "watchify --debug build/player.js -o dist/js/player.js -v",
+    "css:package": "lessc css/main.less dist/css/style.css",
+    "css:watch": "ls css/main.less | entr npm run-script css:package",
+    "html:package": "mkdir -p dist && cp -r html/* dist/",
+    "html:watch": " ls html/* | entr npm run-script html:package",
     "build": "tsc",
-    "watch": "tsc --watch & npm run-script player:watch & npm run-script css:watch",
-    "package": "npm run-script build && npm run-script player:package",
-    "serve": "http-server",
+    "watch": "tsc --watch & npm-run-all -p html:watch css:watch player:watch",
+    "package": "npm-run-all build html:package css:package player:package",
+    "serve": "http-server dist/",
     "test": "mocha --require ts-node/register test/**/*.test.ts"
   },
   "devDependencies": {
     "@types/google.analytics": "0.0.40",
     "browserify": "16.5.1",
-    "catw": "^1.0.1",
+    "catw": "1.0.1",
     "dashjs": "3.0.3",
     "flag-icon-css": "3.4.6",
     "http-server": "0.12.3",
-    "less": "^3.11.3",
+    "less": "3.11.3",
+    "npm-run-all": "4.1.5",
     "typescript": "3.8.3",
     "watchify": "3.11.1"
   }

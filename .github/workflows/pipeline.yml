@@ -19,7 +19,5 @@ jobs:
       run: npm run-script package
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.3.0
-      with:
-        build_dir: "dist/"
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}

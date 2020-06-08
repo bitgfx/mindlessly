@@ -8,22 +8,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: web
     steps:
     - uses: actions/checkout@v2
     - name: Install dependencies
-      run: npm install
+      run: npm --prefix=web/ install
     - name: Compile sources
-      run: npm run-script package
-    - name: Lol test
-      run: ls 
-    - name: Lol 222
-      run: ls dist/
+      run: npm --prefix=web/ run-script package
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.3.0
       with:
-        build_dir: "dist/"
+        build_dir: "web/dist/"
       env:
         GITHUB_PAT: ${{ secrets.PAT }}

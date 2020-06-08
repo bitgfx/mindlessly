@@ -18,10 +18,12 @@ jobs:
     - name: Compile sources
       run: npm run-script package
     - name: Lol test
-      run: ls
+      run: ls 
+    - name: Lol 222
+      run: ls dist/
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.3.0
       with:
-        build_dir: "./"
+        build_dir: "dist/"
       env:
         GITHUB_PAT: ${{ secrets.PAT }}

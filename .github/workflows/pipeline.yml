@@ -17,13 +17,9 @@ jobs:
       run: npm install
     - name: Compile sources
       run: npm run-script package
-    - name: Copy files
-      run: |
-        mkdir dist
-        cp -r index.html style.css js/ dist/
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.3.0
       with:
         build_dir: "dist/"
       env:
-        GITHUB_PAT: ${{ secrets.GH_PAT }}
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}

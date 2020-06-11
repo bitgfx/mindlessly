@@ -1,0 +1,243 @@
+:root {
+  --main-bg-color: #eee;
+  --color-white: #fff;
+  --color-light-grey: #fafafa;
+  --color-medium-grey: #ccc;
+  --color-medium-grey: #666;
+  --margin-normal: 24px;
+  --icon-size: 32px;
+  --font-size: 16px;
+  --title-size: 64px;
+  --font-color: #fff;
+  --shadow: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.7));
+}
+body {
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--font-size);
+  color: var(--font-color);
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+}
+.shadow {
+  -webkit-filter: var(--shadow);
+  filter: var(--shadow);
+}
+#video-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+#video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 1.77777778) {
+  #video-player {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 1.77777778) {
+  #video-player {
+    width: 300%;
+    left: -100%;
+  }
+}
+/* 2. If supporting object-fit, overriding (1): */
+@supports (object-fit: cover) {
+  #video-player {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.fade-animation {
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -ms-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+.slide-in-right {
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -ms-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+.faded {
+  cursor: none;
+}
+.faded div {
+  /* TODO: Should not happen on mobile, only while playing */
+  opacity: 0;
+}
+.paused #video-controls,
+.paused #video-header,
+.paused #bottom-center,
+.paused .icon {
+  opacity: 1;
+}
+#mid-center {
+  height: 128px;
+  width: 128px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -64px;
+  margin-top: -64px;
+  z-index: 100;
+}
+#video-header {
+  position: absolute;
+  top: var(--margin-normal);
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+  text-align: center;
+}
+.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  padding: var(--margin-normal);
+}
+#video-container :not(:last-child) {
+  z-index: 60;
+}
+#top-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#top-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#bottom-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#bottom-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#bottom-center {
+  position: absolute;
+  bottom: var(--margin-normal);
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+  text-align: center;
+}
+.title-text {
+  font-family: 'Mr Dafoe', cursive;
+  font-size: var(--title-size);
+  padding: 0;
+  margin: 0;
+}
+.subtitle-text {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+#language-selector,
+#quality-selector {
+  margin: 24px;
+}
+#language-selector .selected,
+#quality-selector .selected {
+  text-decoration: underline;
+  color: white;
+}
+#language-selector a,
+#quality-selector a {
+  margin-right: 1em;
+  color: gray;
+  font-weight: bold;
+  display: inline;
+}
+#language-selector a:hover,
+#quality-selector a:hover {
+  color: white;
+}
+.icon-flag {
+  height: 24px;
+  filter: grayscale(100%);
+}
+.selected > .icon-flag,
+.icon-flag:hover {
+  filter: grayscale(0%);
+}
+#scene-selection {
+  height: 440px;
+  overflow: hidden scroll;
+  position: absolute;
+  right: 24px;
+  bottom: 64px;
+  width: auto;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.hidden {
+  max-width: 0 !important;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+#scene-list li {
+  list-style: none;
+  padding: 24px;
+}
+#scene-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 24px;
+}
+#scene-list li:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#brand-text {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+#error-dialog {
+  display: none;
+  height: 200px;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  z-index: 100;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 24px;
+  color: black;
+  box-shadow: gray;
+}
+#error-dialog h1 {
+  margin: 0;
+}

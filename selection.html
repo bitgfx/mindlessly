@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Mindlessly</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+
+          .bg { 
+            height: 100%; 
+          }
+
+          .bg::after {
+            content: "";
+            background-image: url("assets/destination.jpg");
+            opacity: 0.75;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;   
+
+          }
+
+          .list-horizontal{
+            text-align: left;
+          }
+          .list-horizontal li{
+            display: flex;
+            width: 768px;
+            max-height: 112px;
+            background-color: var(--color-white);
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            justify-content: center;
+          }
+          .thumb{
+            display: block;
+            width: 142px;
+            height: 80px;
+            background-color: var(--color-light-grey);          
+          }
+
+          .list-horizontal span {
+            display: block;
+            color: var(--color-medium-grey);
+            margin-bottom: 0.5rem;    
+          }
+
+          .content{
+            max-width: 768px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 5rem;
+          }
+
+          h1{
+            text-transform: uppercase;
+          }
+
+          h3{
+            font-weight: 200;
+            padding: 1rem 0;
+          }
+
+          .title{
+            flex-grow: 1;
+            display: block;
+            padding-left: 1rem; 
+            align-items: stretch;
+
+          }
+          .play{
+            align-items: flex-end;
+            width: 48px;
+            height: 48px;
+            margin: 1rem;
+          }
+
+
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Mr+Dafoe" rel="stylesheet">
+    </head>
+    <body class="bg">
+        <div class="content">
+            <img src="assets/48/norway.svg" alt="" height="48" width="48">
+            <h1>Norway</h1>
+            <p>10 meditations</p>
+            <h3>Let’s go explore a relaxed mediation in the sourrounding enviroments in the norwegian nature. Meditate under the northern lights, in the calm fjords or on the highest peaks in Norway.</h3>
+            <section>
+              <ul class="list-horizontal">
+                <a href="/mindlessly/?scene=1">
+                  <li>
+                    <img class="thumb" src="https://storage.googleapis.com/mindlessly/norway/1-northern-lights/thumbnail-s.jpg" alt="" height="80" width="142" />
+                    <div class="title">
+                      <span>Episode 1</span>
+                      <span>Northern Lights</span>
+                    </div>
+                    <div class="play">
+                      <img src="assets/48/play.svg" height="48" width="48">
+                    </div>
+                  </li>
+                </a>
+                <a href="/mindlessly/?scene=6">
+                  <li>
+                    <img class="thumb" src="https://storage.googleapis.com/mindlessly/norway/2-summer-midnight/thumbnail-s.jpg" alt="" height="80" width="142" />
+                    <div class="title">
+                      <span>Episode 2</span>
+                      <span>Summer Midnight</span>
+                    </div>
+                    <div class="play">
+                      <img src="assets/48/play.svg" height="48" width="48">
+                    </div>
+                  </li>
+                </a>
+                <a href="/mindlessly/?scene=7">
+                  <li>
+                    <img class="thumb" src="https://storage.googleapis.com/mindlessly/norway/3-mountain-lake/thumbnail-s.jpg" alt="" height="80" width="142" />
+                    <div class="title">
+                      <span>Episode 2</span>
+                      <span>Mountain Lake</span>
+                    </div>
+                    <div class="play">
+                      <img src="assets/48/play.svg" height="48" width="48">
+                    </div>
+                  </li>
+                </a>
+                <a href="/mindlessly/?scene=8">
+                  <li>
+                    <img class="thumb" src="https://storage.googleapis.com/mindlessly/norway/4-mountain-lake/thumbnail-s.jpg" alt="" height="80" width="142" />
+                    <div class="title">
+                      <span>Episode 3</span>
+                      <span>Mountain Lake 2</span>
+                    </div>
+                    <div class="play">
+                      <img src="assets/48/play.svg" height="48" width="48">
+                    </div>
+                  </li>
+                </a>
+                <a href="/mindlessly/?scene=9">
+                  <li>
+                    <img class="thumb" src="https://storage.googleapis.com/mindlessly/norway/5-sognefjorden/thumbnail-s.jpg" alt="" height="80" width="142" />
+                    <div class="title">
+                      <span>Episode 4</span>
+                      <span>The fjords</span>
+                    </div>
+                    <div class="play">
+                      <img src="assets/48/play.svg" height="48" width="48">
+                    </div>
+                  </li>
+                </a>
+                <a href="/mindlessly/?scene=10">
+                  <li>
+                    <img class="thumb" src="https://storage.googleapis.com/mindlessly/norway/6-helgoya/thumbnail-s.jpg" alt="" height="80" width="142" />
+                    <div class="title">
+                      <span>Episode 5</span>
+                      <span>Lake</span>
+                    </div>
+                    <div class="play">
+                      <img src="assets/48/play.svg" height="48" width="48">
+                    </div>
+                  </li>
+                </a>
+                <a href="/mindlessly/?scene=1">
+                  <li>
+                    <img class="thumb" src="https://storage.googleapis.com/mindlessly/norway/1-northern-lights/thumbnail-s.jpg" alt="" height="80" width="142" />
+                    <div class="title">
+                      <span>Episode 6</span>
+                      <span>Besseggen</span>
+                    </div>
+                    <div class="play">
+                      <img src="assets/48/play.svg" height="48" width="48">
+                    </div>
+                  </li>
+                </a>
+
+              </ul>
+            </section>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

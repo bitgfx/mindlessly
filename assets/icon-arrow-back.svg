@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Icon/Arrow-back</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15,7 L3.83,7 L8.71,2.12 C9.1,1.73 9.1,1.09 8.71,0.7 C8.32,0.31 7.69,0.31 7.3,0.7 L0.71,7.29 C0.32,7.68 0.32,8.31 0.71,8.7 L7.3,15.29 C7.69,15.68 8.32,15.68 8.71,15.29 C9.1,14.9 9.1,14.27 8.71,13.88 L3.83,9 L15,9 C15.55,9 16,8.55 16,8 C16,7.45 15.55,7 15,7 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/Arrow-back" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Color/Black" transform="translate(4.000000, 4.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+            <g id="Color/White" mask="url(#mask-2)" fill="#FFFFFF">
+                <g transform="translate(-4.000000, -4.000000)" id="Rectangle">
+                    <rect x="0" y="0" width="24" height="24"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

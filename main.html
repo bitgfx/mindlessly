@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Mindlessly</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+
+            html,
+            body {
+              width: 100%;
+              height: 100%;
+            }
+
+            body {
+              background-color: #333;
+              background-image: url("assets/bg.jpg");
+              background-position: center; 
+              background-repeat: no-repeat; 
+              background-size: cover;
+              margin: 0;
+              text-align: center;
+            }
+
+
+            .destinations {
+              width: 100%;
+              min-height: 200px;
+              display: flex;
+              overflow-x: auto;
+              -webkit-overflow-scrolling: touch;
+              text-decoration: none;
+              color: #fff;
+              flex: 1;
+              flex-direction: column;
+              flex-basis: 100%;
+            }
+
+            .destinations::-webkit-scrollbar {
+              display: none;
+            }
+
+            .card {
+              width: calc(100% - 24px);
+              margin: 4px 8px;
+              min-height: 216px; 
+              background-position: center; 
+              background-repeat: no-repeat; 
+              background-size: cover;
+              border-radius: 8px;
+              text-align: center;
+              color: #ffffff;
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .main{
+              margin-top: 4rem;
+            }
+
+            @media only screen and (min-width: 768px) {
+              /* For desktop: */
+             
+              .destinations {
+                flex-direction: row;
+              }
+
+              .main{
+                margin: 0;
+                width: 100%;
+              }
+
+            .center-vertically{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+
+            }
+
+
+
+
+
+            h3{
+              font-size: 32px;
+              font-weight: bold;
+              margin: 0;
+            }
+
+            a{
+              text-decoration: none;
+              color: #fff;
+            }
+
+
+
+
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Mr+Dafoe" rel="stylesheet">
+    </head>
+    <body class="center-vertically">
+        <div class="main">
+            <div style="margin-bottom: 3rem;">
+                <h1>Mindlessly</h1>
+                <h2>A journey in meditation</h2>
+            </div>
+            <div class="destinations">
+              <a href="selection.html" id="norway" class="card" style="background-image: url(https://storage.googleapis.com/mindlessly/norway/5-sognefjorden/thumbnail-m.jpg);">
+                    <div>
+                        <img src="assets/48/norway.svg" alt="" height="42" width="42">
+                        <h3>Norway</h3>
+                        <p>10 meditations</p>
+                    </div>
+              </a>
+              <div id="brazil" class="card" style="background-image: url(https://storage.googleapis.com/mindlessly/brazil/1-brazil/thumbnail-m.jpg);">
+                <a href="selection.html">
+                    <div>
+                        <img src="assets/48/brazil.png" alt="" height="42" width="42">
+                        <h3>Brazil</h3>
+                        <p>10 meditations</p>
+                    </div>
+                </a>
+              </div>
+              <div id="iceland" class="card" style="background-image: url(https://storage.googleapis.com/mindlessly/iceland/1-iceland/thumbnail-m.jpg);">
+                <a href="selection.html">
+                    <div>
+                        <img src="assets/48/iceland.png" alt="" height="42" width="42">
+                        <h3>Iceland</h3>
+                        <p>10 meditations</p>
+                    </div>
+                </a>
+              </div>
+              <div id="chile" class="card" style="background-image: url(https://storage.googleapis.com/mindlessly/chile/1-chile/thumbnail-m.jpg);">
+                <a href="selection.html">
+                    <div>
+                        <img src="assets/48/chile.svg" alt="" height="42" width="42">
+                        <h3>Chile</h3>
+                        <p>10 meditations</p>
+                    </div>
+                </a>
+              </div>
+            </div>
+
+            <div style="margin-top: 8rem;">
+
+            <p>For a happy. relaxed and prepared mind.</p>
+            
+            </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
